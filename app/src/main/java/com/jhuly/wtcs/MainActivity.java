@@ -1,5 +1,6 @@
 package com.jhuly.wtcs;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -87,12 +88,7 @@ public class MainActivity extends AppCompatActivity
             // rating bar
             myFragment = new Teste_FragmentRatingBar();
         } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
+            //activity descricao
 
         } else if (id == R.id.nav_send) {
 
@@ -106,5 +102,10 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void activity_descricao(){
+        Intent intent = new Intent(this, Teste_ScrollingActivity.class);
+        startActivity(intent);
     }
 }

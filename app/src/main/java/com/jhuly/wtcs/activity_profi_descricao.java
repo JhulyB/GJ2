@@ -6,6 +6,8 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.jhuly.wtcs.R;
+
 /**
  * Created by Jhuly on 25/08/2016.
  */

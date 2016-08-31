@@ -2,8 +2,8 @@
     <string name="app_name">Wtcs</string>
     <string name="spinner_especialidade">Especialidade</string>
     
-    <string name="registerEmail">e-mail</string>
-    <string name="registerPassword">senha</string>
+    <string name="registerEmail">E-mail</string>
+    <string name="registerPassword">Senha</string>
     <string name="registerComfirm">Confirme sua senha</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>

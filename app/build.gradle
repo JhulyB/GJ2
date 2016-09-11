@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.gjj.wtcs"
+        applicationId "com.jhuly.wtcs"
         minSdkVersion 15
         targetSdkVersion 22
         versionCode 1

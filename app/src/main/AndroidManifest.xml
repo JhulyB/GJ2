@@ -12,12 +12,20 @@
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        
+        <activity
+            android:name=".activity_login"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
         <activity
             android:name=".Teste_ScrollingActivity"
             android:label="@string/title_activity_teste__scrolling"
@@ -27,6 +35,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.jhuly.wtcs.MainActivity" />
         </activity>
+        
+        <activity 
+            android:name=".activity_profi_descricao"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jhuly.wtcs.MainActivity"/>
+        </activity>
+        
     </application>
 
 </manifest>

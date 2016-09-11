@@ -11,20 +11,25 @@
         android:layout_height="wrap_content"
         android:inputType="phone"
         android:ems="10"
+        android:background="@drawable/input_border"
         android:id="@+id/ET_Sign_Phone"
         android:hint="Number Phone"
         android:textAlignment="center"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:editable="false"
+        android:enabled="false" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
+        android:background="@drawable/input_border"
         android:hint="User Name"
         android:textAlignment="center"
         android:id="@+id/ET_Sign_User"
-        android:layout_gravity="center_horizontal" />
+        android:padding="10dp" />
 
     <Button
         android:layout_width="match_parent"

@@ -9,24 +9,24 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="phone"
+        android:inputType="textEmailAddress"
         android:ems="10"
+        android:layout_marginTop="200dp"
         android:background="@drawable/input_border"
         android:id="@+id/ET_Sign_Phone"
-        android:hint="Number Phone"
+        android:hint="Email"
         android:textAlignment="center"
         android:layout_gravity="center_horizontal"
-        android:padding="10dp"
-        android:editable="false"
-        android:enabled="false" />
+        android:padding="10dp" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
+        android:layout_marginTop="10dp"
         android:background="@drawable/input_border"
-        android:hint="User Name"
+        android:hint="Senha"
         android:textAlignment="center"
         android:id="@+id/ET_Sign_User"
         android:padding="10dp" />
@@ -34,7 +34,20 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
         android:id="@+id/BT_Sign_Login"
-        android:text="Sign"/>/>
+        android:text="Sign"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastre-se"
+        android:textSize="15dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/TV_LoginCadastrar"
+        android:layout_gravity="center_horizontal"
+        android:onClick="cadastrarUsuario"/>/>
 
 </LinearLayout>

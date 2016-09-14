@@ -14,20 +14,19 @@ import android.widget.TextView;
  */
 public class activity_login extends AppCompatActivity {
 
-    private Login login;
-    private EditText editTextUser;
+
+    private EditText editTextEmail;
     private EditText editTextPassword;
     private TextView textViewCadastrar;
+    private User user;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        this.login = new Login();
-        this.editTextUser = (EditText)findViewById(R.id.ETLogin_User);
-        this.editTextPassword = (EditText)findViewById(R.id.ETLogin_Pass);
-
+        this.editTextEmail = (EditText)findViewById(R.id.ET_Sign_Email);
+        this.editTextPassword = (EditText)findViewById(R.id.ET_Sign_Password);
         this.textViewCadastrar = (TextView)findViewById(R.id.TV_LoginCadastrar);
         textViewCadastrar.setOnClickListener(TVCadastrar);
 
@@ -46,14 +45,24 @@ public class activity_login extends AppCompatActivity {
     private View.OnClickListener EfetuarLogin = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+
             LoginEfetuado();
 
         }
     };
 
     public void LoginEfetuado(){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+
+        try {
+            if(user.checarLogin(editTextEmail.toString(),editTextPassword.toString()) == true){
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+            }
+        }catch (Exception e){
+            user._mensagem = e.getMessage();
+        }
+
+
     }
 
     public void CadatrarUser(){

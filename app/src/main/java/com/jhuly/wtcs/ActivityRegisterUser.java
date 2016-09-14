@@ -25,15 +25,15 @@ public class ActivityRegisterUser extends AppCompatActivity {
         setContentView(R.layout.activity_register_user);
 
         this.user = new User();
-        this.editTextEmail = (EditText) findViewById(R.id.ET_registerUser_email);
+        this.editTextEmail  = (EditText) findViewById(R.id.ET_registerUser_email);
         this.editTextPassword = (EditText) findViewById(R.id.ET_registerUser_password);
         this.editTextConfirmPassword = (EditText) findViewById(R.id.ET_registerUser_confirmPassword);
 
         Intent intent = getIntent();
 
-        if(intent != null){
+        if (intent != null) {
             Bundle bundle = intent.getExtras();
-            if(bundle != null){
+            if (bundle != null) {
                 this.user.setIdUser(bundle.getInt("idUser"));
                 this.editTextEmail.setText(bundle.getString("email"));
                 this.editTextPassword.setText(bundle.getString("password"));
@@ -41,24 +41,25 @@ public class ActivityRegisterUser extends AppCompatActivity {
         }
     }
 
-    public void cadastro(View view){
+    public void cadastro(View view) {
 
-       // if(this.editTextPassword != this.editTextConfirmPassword){
-       //     Toast.makeText(this,"As senhas não correspondem",Toast.LENGTH_LONG).show();
-       //     this.editTextPassword.setText("");
-       //     this.editTextConfirmPassword.setText("");
-       // }else{
-            Log.d("TESTE DE CONEXAO","INICIO DO CADASTRO");
+        if (this.editTextPassword.getText().toString().equals(this.editTextConfirmPassword.getText().toString())) {
+            Log.d("TESTE DE CONEXAO", "INICIO DO CADASTRO");
             this.user.setEmail(this.editTextEmail.getText().toString());
             this.user.setPassword(this.editTextPassword.getText().toString());
             this.user.registerUser();
-            Toast.makeText(this,this.user.get_mensagem(),Toast.LENGTH_LONG).show();
-            if (user.is_status()){
+            Toast.makeText(this, "Cadastrado com sucesso !!!", Toast.LENGTH_LONG).show();
+            if (user.is_status()) {
                 finish();
             }
-            Log.d("TESTE DE CONEXAO","FIM DO CADASTRO");
-        }
+            Log.d("TESTE DE CONEXAO", "FIM DO CADASTRO");
 
+
+        } else {
+            Toast.makeText(this, "As senhas não correspondem", Toast.LENGTH_LONG).show();
+            this.editTextPassword.setText("");
+            this.editTextConfirmPassword.setText("");
+        }
     }
 
-
+}

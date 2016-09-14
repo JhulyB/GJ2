@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 public class Banco extends _Default implements Runnable {
 
     private Connection conn;
-    private String host = "192.168.1.5";
+    private String host = "192.168.19.2";// utilizar o IP da maquina !!!!
     private String db = "android";
     private int porta = 5433;
     private String user = "postgres";

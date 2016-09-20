@@ -6,6 +6,10 @@
     <string name="registerPassword">Senha</string>
     <string name="registerComfirm">Confirme sua senha</string>
 
+    <string name="loginName">User</string>
+    <string name="loginPass">Senha</string>
+    <string name="loginCadastrar">Não é cadastrado?</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 

@@ -48,6 +48,6 @@
         android:layout_marginTop="30dp"
         android:id="@+id/TV_LoginCadastrar"
         android:layout_gravity="center_horizontal"
-        android:onClick="cadastrarUsuario"/>/>
+        android:onClick="cadastrarUsuario"/>
 
 </LinearLayout>

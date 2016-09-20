@@ -52,10 +52,6 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        this.TexttesteID = (TextView) findViewById(R.id.Et_teste);
-        User user = new User();
-        //TexttesteID.setText(String.valueOf(user.getIdUser()));
-        TexttesteID.setText(user.getEmail().toString());
 
     }
 
@@ -98,14 +94,15 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
         Fragment myFragment = new Fragment();
 
-        if (id == R.id.nav_camara) {
-            // rating bar
-            myFragment = new Teste_FragmentRatingBar();
+        if (id == R.id.nav_perfil_profi) {
+            //activity perfil profissional
+            activity_perfilprof();
         } else if (id == R.id.nav_gallery) {
             //activity descricao
 
         } else if (id == R.id.nav_send) {
-
+            // rating bar
+            myFragment = new Teste_FragmentRatingBar();
         }
 
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -117,8 +114,8 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-    public void activity_descricao(){
-        Intent intent = new Intent(this, Teste_ScrollingActivity.class);
+    public void activity_perfilprof(){
+        Intent intent = new Intent(this, ActivityRegisterProfi.class);
         startActivity(intent);
     }
 }

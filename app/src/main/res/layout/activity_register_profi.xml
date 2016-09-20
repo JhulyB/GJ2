@@ -2,7 +2,7 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp">
+    android:id="@+id/tableLayout_registerProfi">
 
     <TableRow
         android:layout_width="match_parent"
@@ -12,7 +12,7 @@
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:orientation="horizontal"
-            android:layout_column="1">
+            android:layout_span="2">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
                 android:inputType="textPersonName"
                 android:hint="First Name"
                 android:ems="10"
-                android:id="@+id/editText"/>
+                android:id="@+id/ET_registerProfi_firstName"/>
 
             <EditText
                 android:layout_width="wrap_content"
@@ -33,22 +33,11 @@
                 android:inputType="textPersonName"
                 android:hint="Last Name"
                 android:ems="10"
-                android:id="@+id/editText2"/>
+                android:id="@+id/ET_registerProfi_lastName"/>
         </LinearLayout>
     </TableRow>
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/spinner"
-            android:prompt="@string/spinner_especialidade"
-            android:layout_column="1" />
-
-    </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
@@ -64,8 +53,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="phone"
+            android:hint="Telefone"
             android:ems="10"
-            android:id="@+id/editText4"
+            android:id="@+id/ET_registerProfi_phone"
             android:layout_column="1" />
     </TableRow>
 
@@ -84,7 +74,50 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/editText5"
+            android:hint="Cidade"
+            android:id="@+id/ET_registerProfi_city"
             android:layout_column="1" />
     </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner_registerProfi"
+            android:prompt="@string/spinner_especialidade"
+            android:layout_column="1" />
+
+    </TableRow>
+    <TableRow
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_span="2">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salvar"
+                android:id="@+id/BT_registerProfi_salvar"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Excluir"
+                android:id="@+id/BT_registerProfi_excluir"/>
+
+        </LinearLayout>
+
+    </TableRow>
+
 </TableLayout>

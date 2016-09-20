@@ -52,7 +52,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ACTIVITY.MainActivity"/>
         </activity>
+
         
+        <activity android:name=".ACTIVITY.ActivityRegisterProfi"
+            android:label="Perfil Profissional"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
     </application>
 
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>

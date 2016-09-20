@@ -66,4 +66,8 @@ public class ActivityRegisterUser extends AppCompatActivity {
         }
     }
 
+    public void cancelar(View view){
+        finish();
+    }
+
 }

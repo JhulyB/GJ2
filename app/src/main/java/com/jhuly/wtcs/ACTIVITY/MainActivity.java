@@ -25,7 +25,6 @@ import com.jhuly.wtcs.R;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    private TextView TexttesteID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,12 +97,15 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_perfil_profi) {
             //activity perfil profissional
             activity_perfilprof();
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_all_perfis) {
             //activity descricao
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_favoritos) {
             // rating bar
             myFragment = new Teste_FragmentRatingBar();
+        } else if (id==R.id.nav_share){
+            //descricao do profissional
+            activity_descriprof();
         }
 
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -119,4 +121,10 @@ public class MainActivity extends AppCompatActivity
         Intent intent = new Intent(this, ActivityRegisterProfi.class);
         startActivity(intent);
     }
+
+    public void activity_descriprof(){
+        Intent intent = new Intent(this, activity_profi_descricao.class);
+        startActivity(intent);
+    }
+
 }

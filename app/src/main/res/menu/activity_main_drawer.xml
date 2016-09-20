@@ -2,23 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
-        <item android:id="@+id/nav_perfil_profi" android:icon="@mipmap/ic_assignment_ind_black_24dp"
+        <item android:id="@+id/nav_perfil_profi" android:icon="@mipmap/ic_account_circle_black_24dp"
             android:title="Meu Perfil Profissional" />
 
-        <item android:id="@+id/nav_gallery" android:icon="@android:drawable/ic_menu_gallery"
+        <item android:id="@+id/nav_all_perfis" android:icon="@mipmap/ic_assignment_ind_black_24dp"
             android:title="Todos Perfis" />
 
-        <item android:id="@+id/nav_slideshow" android:icon="@android:drawable/ic_menu_slideshow"
+        <item android:id="@+id/nav_favoritos" android:icon="@android:drawable/btn_star_big_off"
             android:title="Favoritos" />
-
-        <item android:id="@+id/nav_manage" android:icon="@android:drawable/ic_menu_manage"
-            android:title="Tools" />
     </group>
 
     <item android:title="Communicate">
         <menu>
             <item android:id="@+id/nav_share" android:icon="@android:drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="//descrição profi" />
 
             <item android:id="@+id/nav_send" android:icon="@android:drawable/ic_menu_send"
                 android:title="Send" />

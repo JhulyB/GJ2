@@ -1,4 +1,4 @@
-package com.jhuly.wtcs;
+package com.jhuly.wtcs.UTILITARIOS;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 public class Banco extends _Default implements Runnable {
 
     private Connection conn;
-    private String host = "192.168.19.2";// utilizar o IP da maquina !!!!
+    private String host = "192.168.130.157";// utilizar o IP da maquina !!!!
     private String db = "android";
     private int porta = 5433;
     private String user = "postgres";

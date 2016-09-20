@@ -1,4 +1,4 @@
-package com.jhuly.wtcs;
+package com.jhuly.wtcs.ACTIVITY;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,9 +15,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import com.jhuly.wtcs.MODELO.User;
+import com.jhuly.wtcs.R;
+
+
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private TextView TexttesteID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +51,11 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        this.TexttesteID = (TextView) findViewById(R.id.Et_teste);
+        User user = new User();
+        //TexttesteID.setText(String.valueOf(user.getIdUser()));
+        TexttesteID.setText(user.getEmail().toString());
 
     }
 

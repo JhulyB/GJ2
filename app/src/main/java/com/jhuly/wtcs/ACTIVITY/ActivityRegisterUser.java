@@ -1,4 +1,4 @@
-package com.jhuly.wtcs;
+package com.jhuly.wtcs.ACTIVITY;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+import com.jhuly.wtcs.DAO.UserDAO;
+import com.jhuly.wtcs.MODELO.User;
+import com.jhuly.wtcs.R;
 
 /**
  * Created by STI01 on 11/09/2016.
@@ -14,6 +17,7 @@ import android.widget.Toast;
 public class ActivityRegisterUser extends AppCompatActivity {
 
     private User user;
+    UserDAO userDAO = new UserDAO();
     private EditText editTextEmail;
     private EditText editTextPassword;
     private EditText editTextConfirmPassword;
@@ -47,9 +51,9 @@ public class ActivityRegisterUser extends AppCompatActivity {
             Log.d("TESTE DE CONEXAO", "INICIO DO CADASTRO");
             this.user.setEmail(this.editTextEmail.getText().toString());
             this.user.setPassword(this.editTextPassword.getText().toString());
-            this.user.registerUser();
+            this.userDAO.registerUser(user);
             Toast.makeText(this, "Cadastrado com sucesso !!!", Toast.LENGTH_LONG).show();
-            if (user.is_status()) {
+            if (userDAO.is_status()) {
                 finish();
             }
             Log.d("TESTE DE CONEXAO", "FIM DO CADASTRO");

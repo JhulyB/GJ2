@@ -1,4 +1,4 @@
-package com.jhuly.wtcs;
+package com.jhuly.wtcs.ACTIVITY;
 
 import android.app.FragmentManager;
 import android.os.Bundle;
@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.jhuly.wtcs.R;
 
 /**
  * Created by Jhuly on 24/08/2016.

@@ -1,4 +1,4 @@
-package com.jhuly.wtcs;
+package com.jhuly.wtcs.ACTIVITY;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.jhuly.wtcs.DAO.UserDAO;
+import com.jhuly.wtcs.MODELO.User;
+import com.jhuly.wtcs.R;
+
+import java.sql.SQLException;
 
 /**
  * Created by Jhuly on 11/09/2016.
@@ -15,10 +22,10 @@ import android.widget.TextView;
 public class activity_login extends AppCompatActivity {
 
 
-    private EditText editTextEmail;
-    private EditText editTextPassword;
-    private TextView textViewCadastrar;
-    private User user;
+     EditText editTextEmail;
+     EditText editTextPassword;
+     TextView textViewCadastrar;
+     User user;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,15 +58,20 @@ public class activity_login extends AppCompatActivity {
         }
     };
 
-    public void LoginEfetuado(){
+    public void LoginEfetuado() {
+        UserDAO userDAO = new UserDAO();
+
 
         try {
-            if(user.checarLogin(editTextEmail.toString(),editTextPassword.toString()) == true){
+            if (userDAO.checarLogin(editTextEmail.getText().toString(),editTextPassword.getText().toString()) == true) {
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
+                Toast.makeText(this,userDAO.get_mensagem(),Toast.LENGTH_LONG).show();
+            }else{
+                Toast.makeText(this,"Usuario o senha Inválida",Toast.LENGTH_LONG).show();
             }
-        }catch (Exception e){
-            user._mensagem = e.getMessage();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
 
 

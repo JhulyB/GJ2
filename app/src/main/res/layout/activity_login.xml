@@ -13,7 +13,7 @@
         android:ems="10"
         android:layout_marginTop="200dp"
         android:background="@drawable/input_border"
-        android:id="@+id/ET_Sign_Phone"
+        android:id="@+id/ET_Sign_Email"
         android:hint="Email"
         android:textAlignment="center"
         android:layout_gravity="center_horizontal"
@@ -28,7 +28,7 @@
         android:background="@drawable/input_border"
         android:hint="Senha"
         android:textAlignment="center"
-        android:id="@+id/ET_Sign_User"
+        android:id="@+id/ET_Sign_Password"
         android:padding="10dp" />
 
     <Button
@@ -37,7 +37,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginRight="50dp"
         android:layout_marginLeft="50dp"
-        android:id="@+id/BT_Sign_Login"
+        android:id="@+id/BT_Login"
         android:text="Sign"/>
 
     <TextView

@@ -29,6 +29,7 @@ public class Teste_FragmentRatingBar extends Fragment {
     private TextView txtValorAvaliacao;
     private Button btnSubmit;
 
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);

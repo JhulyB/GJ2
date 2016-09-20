@@ -24,5 +24,6 @@ public class activity_profi_descricao extends AppCompatActivity {
                 Snackbar.make(v, "Hello Snackbar", Snackbar.LENGTH_LONG).show();
             }
         });
+
     }
 }

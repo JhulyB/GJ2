@@ -41,5 +41,6 @@ public class ActivityRegisterProfi extends AppCompatActivity {
         spinnerEspecialidade = (Spinner)findViewById(R.id.spinner_registerProfi);
         spinnerEspecialidade.setAdapter(Especialidades);
 
+
     }
 }

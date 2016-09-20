@@ -32,3 +32,4 @@ public class Teste_ScrollingActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }
+

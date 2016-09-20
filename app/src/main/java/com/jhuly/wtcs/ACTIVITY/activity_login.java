@@ -62,6 +62,7 @@ public class activity_login extends AppCompatActivity {
         UserDAO userDAO = new UserDAO();
 
 
+
         try {
             if (userDAO.checarLogin(editTextEmail.getText().toString(),editTextPassword.getText().toString()) == true) {
                 Intent intent = new Intent(this, MainActivity.class);

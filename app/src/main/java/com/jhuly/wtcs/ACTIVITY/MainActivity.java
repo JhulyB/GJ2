@@ -92,38 +92,31 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        Fragment myFragment = new Fragment();
+        AppCompatActivity appCompatActivity;
 
         if (id == R.id.nav_perfil_profi) {
             //activity perfil profissional
-            activity_perfilprof();
+            appCompatActivity = new ActivityRegisterProfi();
+            Activities(appCompatActivity);
+
         } else if (id == R.id.nav_all_perfis) {
             //activity descricao
 
         } else if (id == R.id.nav_favoritos) {
-            // rating bar
-            myFragment = new Teste_FragmentRatingBar();
+
         } else if (id==R.id.nav_share){
             //descricao do profissional
-            activity_descriprof();
-        }
+            appCompatActivity = new activity_profi_descricao();
+            Activities(appCompatActivity);
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.containerPainel, myFragment)
-                .commit();
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-    public void activity_perfilprof(){
-        Intent intent = new Intent(this, ActivityRegisterProfi.class);
-        startActivity(intent);
-    }
-
-    public void activity_descriprof(){
-        Intent intent = new Intent(this, activity_profi_descricao.class);
+    public void Activities(AppCompatActivity appCompatActivity){
+        Intent intent = new Intent(this, appCompatActivity.getClass());
         startActivity(intent);
     }
 

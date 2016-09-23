@@ -53,7 +53,7 @@
             android:label="Perfil Profissional"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".ScrollingActivity_register_prof"
+            android:name=".ACTIVITY.ScrollingActivity_register_prof"
             android:label="@string/title_activity_scrolling_activity_register_prof"
             android:parentActivityName=".ACTIVITY.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">

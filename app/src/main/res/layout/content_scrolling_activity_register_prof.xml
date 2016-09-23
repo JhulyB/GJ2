@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.jhuly.wtcs.ScrollingActivity_register_prof"
+    tools:context=".ACTIVITY.ScrollingActivity_register_prof"
     tools:showIn="@layout/activity_scrolling_register_prof"
 
     android:paddingTop="20dp"

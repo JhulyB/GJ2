@@ -33,11 +33,11 @@ public class activity_login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         this.editTextEmail = (EditText)findViewById(R.id.ET_Sign_Email);
-        this.editTextPassword = (EditText)findViewById(R.id.ET_Sign_Password);
+        this.editTextPassword = (EditText)findViewById(R.id.ET_Sign_User);
         this.textViewCadastrar = (TextView)findViewById(R.id.TV_LoginCadastrar);
         textViewCadastrar.setOnClickListener(TVCadastrar);
 
-        Button BT_Login = (Button)findViewById(R.id.BT_Login);
+        Button BT_Login = (Button)findViewById(R.id.BT_Sign_Login);
         BT_Login.setOnClickListener(EfetuarLogin);
 
     }
@@ -69,7 +69,7 @@ public class activity_login extends AppCompatActivity {
                 startActivity(intent);
                 Toast.makeText(this,userDAO.get_mensagem(),Toast.LENGTH_LONG).show();
             }else{
-                Toast.makeText(this,"Usuario ou senha Inválida",Toast.LENGTH_LONG).show();
+                Toast.makeText(this,"Usuario o senha Inválida",Toast.LENGTH_LONG).show();
             }
         } catch (SQLException e) {
             e.printStackTrace();

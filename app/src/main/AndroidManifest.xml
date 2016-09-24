@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jhuly.wtcs">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,6 +14,10 @@
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> parent of be7dd25... navigation Drawer;
         <activity
             android:name=".ACTIVITY.activity_login"
             android:label=""
@@ -26,11 +28,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".ACTIVITY.ActivityRegisterUser"
             android:label="Login"
             android:parentActivityName=".ACTIVITY.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
         <activity
             android:name=".ACTIVITY.Teste_ScrollingActivity"
             android:label="@string/title_activity_teste__scrolling"
@@ -40,27 +46,33 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ACTIVITY.MainActivity" />
         </activity>
-        <activity
+        
+        <activity 
             android:name=".ACTIVITY.activity_profi_descricao"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ACTIVITY.MainActivity" />
+                android:value=".ACTIVITY.MainActivity"/>
         </activity>
-        <activity
-            android:name=".ACTIVITY.ActivityRegisterProfi"
+
+        
+        <activity android:name=".ACTIVITY.ActivityRegisterProfi"
             android:label="Perfil Profissional"
+<<<<<<< HEAD
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".ACTIVITY.ScrollingActivity_register_prof"
             android:label="@string/title_activity_scrolling_activity_register_prof"
             android:parentActivityName=".ACTIVITY.MainActivity"
+=======
+>>>>>>> parent of be7dd25... navigation Drawer;
             android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.jhuly.wtcs.ACTIVITY.MainActivity" />
+
         </activity>
+
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
 </manifest>

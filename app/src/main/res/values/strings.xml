@@ -16,6 +16,9 @@
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_teste__scrolling">Descrição</string>
+<<<<<<< HEAD
     <string name="title_activity_scrolling_activity_register_prof">Meu Perfi Profissional</string>
 
+=======
+>>>>>>> parent of be7dd25... navigation Drawer;
 </resources>
